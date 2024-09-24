@@ -13,7 +13,7 @@ modified: 2024-09-22T22:44
 
 ## 1.2 Programs Are Translated by Other Programs into Different Forms
 
-![[CA 1. A Tour of Computer Systems-1726993752388.jpeg]]
+![alt text](<../Assets/Computer_Architecture/CA 1. A Tour of Computer Systems-1726993752388.jpeg>)
 
 #### Preprocessing phase
 
@@ -39,11 +39,10 @@ main:
 
 > [!NOTE] 재배치가능한 객체 프로그램(Relocatable Object Program)
 >
-> - 컴파일된 코드의 이진 형태이다.
-> - 메모리의 특정 주소에 고정되지 않고, 다양한 메모리 주소에 배치되어 실행할 수 있다.
->   - 주로 라이브러리, 모듈형 프로그램에서 이식성과 재사용성을 높이기 위해 사용된다.
+> -   컴파일된 코드의 이진 형태이다.
+> -   메모리의 특정 주소에 고정되지 않고, 다양한 메모리 주소에 배치되어 실행할 수 있다.
+>     -   주로 라이브러리, 모듈형 프로그램에서 이식성과 재사용성을 높이기 위해 사용된다.
 
 #### Linking phase
 
 hello 프로그램은 printf 함수를 호출하는데, printf 함수는 이전에 미리 컴파일된 객체 파일인 printf.o에 있고, printf.o와 hello.o를 연결해 printf 함수를 사용할 수 있도록 만든다. Linking을 통해 만들어낸 파일은 hello 라는 이름의 실행 가능한 객체 프로그램(binary)으로 변환된다.
-

@@ -1,6 +1,6 @@
 # CS-Farming
 
-This repository started based on [TeachYourselfCS-KR](https://github.com/minnsane/TeachYourselfCS-KR?tab=readme-ov-file#%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0) step.
+This repository started based on [TeachYourselfCS-KR](https://github.com/minnsane/TeachYourselfCS-KR?tab=readme-ov-file#%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0)
 
 ## 🌿️ Computer Architecture
 
