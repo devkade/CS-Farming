@@ -20,8 +20,8 @@ modified: 2024-09-23T00:32
 > 5. 네트워크 및 소프트웨어에서 발생하는 버퍼 오버플로우 취약점으로 인한 보안 구멍을 피하는 방법을 배울 수 있다.
 > 6. 동시성의 약속과 위험성을 배울 수 있다.
 
-- [CA 1.1 Information Is Bits + Context](<https://github.com/devkade/CS-Farming/Computer_Architecture/CA> 1.1 Information Is Bits + Context.md)
-- [CA 1.2 Programs Are Translated by Other Programs into Different Forms]
-- [CA 1.3 It Pays to UnderStand How Compilation Systems Work]
-- [CA 1.4 Processors Read and Interpret Instructions Stored in Memory]
-- [CA 1.5~1.6 Caches Matter]
+- [CA 1.1 Information Is Bits + Context](https://github.com/devkade/CS-Farming/Computer_Architecture/CA_1.1_Information_Is_Bits_+_Context.md)
+- [CA 1.2 Programs Are Translated by Other Programs into Different Forms](https://github.com/devkade/CS-Farming/Computer_Architecture/CA_1.2_Programs_Are_Translated_by_Other_Programs_into_Different_Forms.md)
+- [CA 1.3 It Pays to Understand How Compilation Systems Work](https://github.com/devkade/CS-Farming/Computer_Architecture/CA_1.3_It_Pays_to_Understand_How_Compilation_Systems_Work.md)
+- [CA 1.4 Processors Read and Interpret Instructions Stored in Memory](https://github.com/devkade/CS-Farming/Computer_Architecture/CA_1.4_Processors_Read_and_Interpret_Instructions_Stored_in_Memory.md)
+- [CA 1.5~1.6 Caches Matter](https://github.com/devkade/CS-Farming/Computer_Architecture/CA_1.5-1.6_Caches_Matter.md)
