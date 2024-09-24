@@ -6,4 +6,4 @@ This repository started based on [TeachYourselfCS-KR](https://github.com/minnsan
 
 Based on [Computer System: A Programmer's Perspective](http://csapp.cs.cmu.edu/3e/home.html)
 
-[CH 1 A Tour of Computer Systems](https://github.com/devkade/CS-Farming/Computer_Architecture/CA_1_A_Tour_of_Computer_Systems.md)
+[CH 1 A Tour of Computer Systems](https://github.com/devkade/CS-Farming/blob/main/Computer_Architecture/CA_1_A_Tour_of_Computer_Systems.md)
