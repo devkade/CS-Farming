@@ -22,6 +22,6 @@ modified: 2024-09-23T00:32
 
 - [CA 1.1 Information Is Bits + Context](https://github.com/devkade/CS-Farming/blob/main/Computer_Architecture/CA_1.1_Information_Is_Bits_+_Context.md)
 - [CA 1.2 Programs Are Translated by Other Programs into Different Forms](https://github.com/devkade/CS-Farming/blob/main/Computer_Architecture/CA_1.2_Programs_Are_Translated_by_Other_Programs_into_Different_Forms.md)
-- [CA 1.3 It Pays to Understand How Compilation Systems Work](https://github.com/devkade/CS-Farming/blob/main/Computer_Architecture/CA_1.3_It_Pays_to_Understand_How_Compilation_Systems_Work.md)
+- [CA 1.3 It Pays to Understand How Compilation Systems Work](https://github.com/devkade/CS-Farming/blob/main/Computer_Architecture/CA_1.3_It_Pays_to_UnderStand_How_Compilation_Systems_Work.md)
 - [CA 1.4 Processors Read and Interpret Instructions Stored in Memory](https://github.com/devkade/CS-Farming/blob/main/Computer_Architecture/CA_1.4_Processors_Read_and_Interpret_Instructions_Stored_in_Memory.md)
 - [CA 1.5~1.6 Caches Matter](https://github.com/devkade/CS-Farming/blob/main/Computer_Architecture/CA_1.5~1.6_Caches_Matter.md)
