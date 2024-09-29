@@ -12,7 +12,6 @@
 7. [Truncating Numbers](./CA_2.2_Integer_Representation.md#227-truncating-numbers)
 8. [Advice on Signed versus Unsigned](./CA_2.2_Integer_Representation.md#228-advice-on-signed-versus-unsigned)
 
----
 
 # 2.2.0. Overview
 
@@ -39,7 +38,6 @@
 - TMax = Two's-complement value's Maximum
 - UMax = Maximum Unsigned Value
 
----
 
 # 2.2.1. Integral Data Types
 
@@ -61,6 +59,7 @@
 <li>A02. 됩니다. 32-bit의 Program은 해당 Data를 저장 및 표현하기 위해 2개의 Memory Address를 사용합니다.</li>
 
 <img width="585" alt="image" src="https://github.com/user-attachments/assets/81ff0dbd-c696-47ac-bede-b48c51325a32">
+<br>
 https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models
   
 </div>
@@ -72,7 +71,6 @@ https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models
 - 양수의 범위에 비해, 음수의 범위가 1 더 많음 (e.g. -128 vs. +127)
   - 음수가 표현되는 방식에 의해 그렇게 됨
 
----
 
 # 2.2.2. Unsigned Encodings
 
@@ -88,7 +86,7 @@ https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models
 → Function $B2U_w$ is a bijection (bijection = a Function $f$ that goes two ways = 역함수 존재)
 → $U2B_w$ Exists (Unsigned-to-Binary)
 
----
+
 
 # 2.2.3. Two’s-Complement Encodings
 
@@ -180,7 +178,8 @@ show_bytes((byte_pointer) &mx, sizeof(short));
     - 12,345 = [0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 1] = 0x3039
     - -12,345 = [1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1] = 0xCFC7
 <br>
-## Cf. More on Fixed-size Integer types
+
+### Cf. More on Fixed-size Integer types
 <details>
   <summary>Contents</summary>
   <div markdown="1">
@@ -237,7 +236,7 @@ show_bytes((byte_pointer) &mx, sizeof(short));
 </details>
   
   
-  <h2> Cf. Alternative Representation of Signed Numbers</h2>
+### Cf. Alternative Representation of Signed Numbers
 <details>
   <summary>Contents</summary>
   <div markdown="1">
@@ -255,7 +254,7 @@ show_bytes((byte_pointer) &mx, sizeof(short));
   </details>
   <br>
 
-  ---
+  
 
 # 2.2.4 Conversions between Signed and Unsigned
 
@@ -326,7 +325,7 @@ printf("u = %u, ut = %d\n", u, tu);
     - T2B와 유사
     - $U2T_w(u) = -u_{w-1}2^w + u$
 
----
+
 
 # 2.2.5. Signed versus Unsigned in C
 
@@ -420,7 +419,7 @@ printf("u = %u = %d\n", u, u);
   </div>
   </details>
 
----
+
 
 # 2.2.6. Expanding the Bit Representation of a Number
 
@@ -504,7 +503,7 @@ show_bytes(&uy, sizeof(unsigned));
     2. Change the Type (int(4) → Unsigned(4)) : -12,345 ( 0xFFFFCFC7 ) → 4,294,954,951 ( 0xFFFFCFC7 )
     - 즉, (unsigned) sx == (unsigned) (int) sx
 
----
+
 
 # 2.2.7. Truncating Numbers (= 숫자 자르기)
 
@@ -554,7 +553,7 @@ let $\overrightarrow x' = [x_{k-1}, x_{k-2}, \dots, x_0]$ (k-bits의 크기로 T
     - [ 0 1 ] = 1
     - $U2T_2(-3 \space mod \space 2^2) = U2T_2(1)$ = [ 0 1 ] = 1
 <br>
----
+
 
 # 2.2.8. Advice on Signed versus Unsigned
 
