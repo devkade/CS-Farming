@@ -94,6 +94,7 @@ https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models
     - The Most Significant Bit(MSB, 일명 Sign Bit) of the word have Negative weight
     → 가장 왼쪽의 Bit가 양수, 음수의 부호를 결정함
 <br>
+
 - $\overrightarrow{x} = [x_{w-1}, x_{w-2}, \dots, x_0]$  (단, $x_i = 0 \space or \space 1$)
 - $B2T_w(\overrightarrow{x}) \doteq -x_{w-1}2^{w-1} + \sum_{i=0}^{w-2}x_i2^i$ (Binary-to-Two’s complement)
 → For 4-bit representation, [1001] = -7, [0111] = 7, 둘을 더하면 [0000] = 0
@@ -108,6 +109,7 @@ https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models
 - Function $B2T_w$ is a bijection (일대일 대응, 즉 역함수를 가짐)
 - $T2B_w$ exists  (Two’s-complement-to-Binary)
 <br>
+
 ### Practice Problem 2.17
 
 ![Practice Problem 2.17](https://github.com/user-attachments/assets/4dc11363-d649-46e0-b8f4-117951bd100a)
@@ -129,15 +131,18 @@ w의 단위는 bit
 - Bit Patterns로 표현되는 것들 중 절반은 Negative Numbers, 나머지 절반은 Nonnegative Numbers를 표현함
 → 그런데 0은 Nonnegative Number에 포함되므로, Negative Numbers의 수가 하나 더 많은 것
 <br>
+
 ### ii. $UMax = 2TMax + 1$
 
 - Unsigned Value의 최대값은 Two’s-complement Value의 두 배가 넘음
 <br>
+
 ### iii. Representation of Constants -1 and 0
 
 - -1은 $UMax$와 동일한 Bit Representation을 가짐 0xFFFF…FFFF
 - 0을 Signed이거나 Unsigned이거나, 모두 0x0000…0000으로 모든 Bit가 0
 <br>
+
 ## b. A Portability related to Representation of Signed Numbers
 
 - C standards에서는 Signed Number를 Two’s-complement로 표현하라고 요구하지는 않지만, 대부분의 Machine에서는 요구함.
@@ -150,12 +155,14 @@ w의 단위는 bit
     - `INT_MAX`, `INT_MIN`, `UINT_MAX`를 사용하여 Signed and Unsigned Integers의 범위를 동적으로 정의함.
     → Two’s-complement machine에서의 w-bits의 Integer의 경우, 위 세 상수는 각각 $TMAX_w$, $TMin_w$, and $UMax_w$로 값이 매칭됨.
 <br>
+
 ### cf. The Java Standard
 
 - Java Standard는 64-bit case에서 보여진 Range와 Representation을 따름. (Figure 2.10)
 - Single-byte(1-byte) Data type인 `char`를 `byte`로 부름.
     - 이를 통해 Machine이나 OS에 상관없이, Java Program은 Identically 작동할 수 있음.
 <br>
+
 ## c. Figure 2.15 Two’s-complement representations of 12,345 and -12,345, and unsigned representation of 53,191
 
 ```c
@@ -189,8 +196,7 @@ show_bytes((byte_pointer) &mx, sizeof(short));
       <li> e.g). C의 Data types으로 `long`은 호환가능은 하지만, Machine마다 범위가 다름<br>
           		→ 따라서 호환되는 Data Type을 선택했다 하더라도, Portability를 보장할 수는 없음 </li>
     </ul>
-    
-    <h3> b. The ISO C99 standard introduces this class of integer types in the file <code>stdint.h</code></h3>
+    <h3> b. The ISO C99 standard introduces this class of integer types in the file stdint.h</h3>
     <ul>
       <li> Figure 2.3에서 다뤘던 32- and 64-bit versions of fixed-sized integer types에 대해서 국제표준화기구 ISO C99 standard가 <code>stdint.h</code>에 정의해 놓음</li>
       <li><code>stdint.h</code> file에서 <code>intN_t</code>와 <code>uintN_t</code>의 형태로 Integer를 정의해 놓음
@@ -200,16 +206,13 @@ show_bytes((byte_pointer) &mx, sizeof(short));
         </ul>
       </li>
     </ul>
-    
     <h3> c. Along with these data types are a set of macros defining the minimum and maximum values for each value of N. These have names of the form INTN_MIN, INTN_MAX, and UINTN_MAX. → 무슨 Macro를 의미하는 건지 모르겠음</h3>
-    
     <li> 정해진 순서에 따라 어떻게 특정한 입력 시퀀스 (문자열을 가리키기도 함)가 출력 시퀀스 (이 또한 문자열을 가리키기도 함)로 매핑되어야 하는지를 정의하는 규칙이나 패턴을 말한다. 하나의 매크로를 특정한 출력 시퀀스로 바로 만들어내는 매핑 과정은 "매크로 확장"이라고 알려져 있다.<br>
-    → from [https://ko.wikipedia.org/wiki/매크로_(컴퓨터_과학)](https://ko.wikipedia.org/wiki/%EB%A7%A4%ED%81%AC%EB%A1%9C_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99))
+    → from <a href="https://ko.wikipedia.org/wiki/%EB%A7%A4%ED%81%AC%EB%A1%9C_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99)">[매크로 (컴퓨터 과학) wikipedia]</a>
     </li>
     <li>
       앞에서 말한 Context의 개념인가??
     </li>
-    
     <h3> <code>
       printf("x = %" PRId32 ", y = %" PRIu64 "\n", x, y);</code></h3>
     <ul>
@@ -241,13 +244,9 @@ show_bytes((byte_pointer) &mx, sizeof(short));
   <summary>Contents</summary>
   <div markdown="1">
     <h3> i. Ones’ complement (1의 보수)</h3>
-    
-    <li> $B2O_w(\overrightarrow x) \doteq -x_{w-1}(2^{w-1}-1) + \sum^{w-2}_{i=0}x_i2^i$</li>
-    
+    <li>$B2O_w(\overrightarrow x) \doteq -x_{w-1}(2^{w-1}-1) + \sum^{w-2}_{i=0}x_i2^i$</li>
     <h3> ii. Sign Magnitude</h3>
-    
     <li>$B2S_w(\overrightarrow x) \doteq (-1)^{x_{w-1}} (\sum^{w-2}_{i=0}x_i2^i)$</li>
-    
     <li>현대의 거의 모든 Machine은 Two’s-complement를 사용하니 몰라도 될듯?</li>
     <li>Sign-magnitude encoding은 Floating-point Numbers를 표현할 때 사용됨</li>
   </div>
@@ -291,6 +290,7 @@ printf("u = %u, ut = %d\n", u, tu);
     
     - $UMax_{32} = 4,294,967,295$ = [ 1 1 1 1 … 1 1 1 1]
 <br>
+
 ## b. T2U, U2T functions
 
 ### i. $T2U_w$ (Two's-complement-to-Unsigned Number)
@@ -308,6 +308,7 @@ printf("u = %u, ut = %d\n", u, tu);
 
 → 일반화 : $1 + UMax_w = 2^w$ = [ 0 0 0 0 … 0 0 0 1] + [ 1 1 1 1 … 1 1 1 1] = 1 [ 0 0 0 0 … 0 0 0 0]
 <br>
+
 ### iii. PRINCIPLE : Conversion from two’s complement to unsigned (T2U)
 
 ![PRINCIPLE 2.5](https://github.com/user-attachments/assets/2e64f048-4958-4e3b-8c16-e0dc006ee524)
@@ -317,6 +318,7 @@ printf("u = %u, ut = %d\n", u, tu);
     - $B2U_w(\overrightarrow x) = B2T_w(\overrightarrow x) + x_{w-1}2^w$
     - $B2U_w(T2B_w(x)) = T2U_w(x) = x + x_{w-1}2^w$
 <br>
+
 ### iv. PRINCIPLE : Conversion from Unsigned to two’s-complement (U2T)
 
 ![PRINCIPLE 2.7](https://github.com/user-attachments/assets/ec90916f-ad01-4541-8f7a-f0aad7bf448a)
@@ -329,13 +331,14 @@ printf("u = %u, ut = %d\n", u, tu);
 
 # 2.2.5. Signed versus Unsigned in C
 
-- C standard에서는 Signed Number를 표현하는 방식을 특정하진 않았지만, 대부분의 Machine에서는 Two’s-complement 방식의 표현을 사용함.
+- C standard에서는 Signed Number를 표현하는 방식을 특정하진 않았지만, 대부분의 Machine에서는 Two’s-complement 방식의 표현을 사용함.<br>
 → 또한 Conversion에서도 마찬가지로, C Standard는 특정하지 않았지만 Machine에서는 Bit Representation이 변하지 않는 Rule을 통해 Conversion을 수행함.
 - 보통 대부분의 숫자는 Signed가 Default 값임.
     - e.g). 12345 or 0x1A2B를 선언할 때, 기본적으로 Signed로 인식됨.
 - ‘U’ or ‘u’라는 suffix를 숫자 뒤에 추가하여 Unsigned Constant임을 명시할 수 있음
     - e.g). 12345U or 0x1A2Bu
 <br>
+
 ## a. Conversion by Explicit casting and Implicitly Casting
 
 ```c
@@ -525,6 +528,7 @@ int y = sx;             /* -12345 */
 
 - Bit 축소는 원래 숫자의 값을 변경시킬 수도 있음
 <br>
+
 ### ii. PRINCIPLE : Truncation of an Unsigned Number
 
 - Let $\overrightarrow x = [x_{w-1}, x_{w-2}, \dots, x_0]$, and
