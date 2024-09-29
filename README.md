@@ -8,5 +8,5 @@ Let's farm computer science knowledge 😁
 
 Based on [Computer System: A Programmer's Perspective](http://csapp.cs.cmu.edu/3e/home.html)
 
--   [CH 1 A Tour of Computer Systems](./CA_1_A_Tour_of_Computer_Systems.md)
--   [CH 2 Representing and Manipulating Information](./CA_2_Representing_and_Manipulating_Information.md)
+-   [CH 1 A Tour of Computer Systems](./Computer_Architecture/CA_1_A_Tour_of_Computer_Systems.md)
+-   [CH 2 Representing and Manipulating Information](./Computer_Architecture/CA_2_Representing_and_Manipulating_Information.md)
