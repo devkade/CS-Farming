@@ -22,3 +22,4 @@ modified: 2024-09-28T22:18
 <br>
 
 -   [CA_2.1_Information_Storage](./CA_2.1_Information_Storage.md)
+-   [CA_2.2_Integer_Representation](./CA_2.2_Integer_Representation.md)
