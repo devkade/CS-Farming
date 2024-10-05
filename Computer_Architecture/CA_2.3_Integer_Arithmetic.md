@@ -76,10 +76,10 @@
    
 ![2_3_2 2](https://github.com/user-attachments/assets/3da1436e-1d11-4d31-9e03-5f3709a92ae5)
     
-    → x+y의 4가지 범위에 따라 각각의 값으로 매핑된다.
+    → x+y의 4가지(Case 1~4) 범위에 따라 각각의 값으로 매핑된다.
  - ex)    Case 1 ($-2^{w}≤x+y<-2^{w-1}$) 
-        - $(x+y) mod2^w = x+y +2^w$
-        - $x+y+2^w$ ≤ $Tmax_w$ 이므로 $U2Tw[x+y+2^w] = x+y+2^w$
+    - $(x+y) mod2^w = x+y +2^w$
+    - $x+y+2^w$ ≤ $Tmax_w$ 이므로 $U2Tw[x+y+2^w] = x+y+2^w$
 
 ![2_3_2 18](https://github.com/user-attachments/assets/de8a1468-1c12-4e6b-b6e1-1242e8f7c444)
 ### **Detecting overflow int two’s complement addition**
@@ -116,7 +116,7 @@
 
 - $x = B2Tw(x), y= B2Tw(y)$라 하고, $x' = B2Uw(x), y' = B2Uw(y)$라 할 때, $T2Bw(x*^{t} _{w}y) = U2Bw(x'*^{u} _{w}y')$ 이다. 
     
-    → w bit로 자른 각각의 $x*y$ 값을 binary로 바꾸었을 때 값이 같다.  -> bit level equicalence하다. 
+    - w bit로 자른 각각의 $x*y$ 값을 binary로 바꾸었을 때 값이 같다.  ---> bit level equicalence하다. 
 - **DERIVATION**
     ![2_3_2 3](https://github.com/user-attachments/assets/ba10d381-4655-4b0d-96bd-5c3c306cbbf4)
 
@@ -130,10 +130,10 @@
 ### **unsigned, two’s complement  multiplication by a power of 2^w**
 
 - 2의 보수와 unsigned는 bit level이 동일하므로 상수 곱셈에 대해 유사한 주장을 할 수 있다.
-- 만약 x*14 일 때 14 = 2^3+ 2^2 + 2^1 로 인식하여 (x<<3) + (x<<2) + (x<<1) 과 동일하다. 이는 오버플로우가 발생하더라도 2의 보수와 unsigned 상수 곱셈은 동일한 결과를 생성한다.
+- 만약 $x*14$ 일 때 $14 = 2^3+ 2^2 + 2^1$ 로 인식하여 $(x<<3) + (x<<2) + (x<<1)$ 과 동일하다. 이는 오버플로우가 발생하더라도 2의 보수와 unsigned 상수 곱셈은 동일한 결과를 생성한다.
 
-- **형식 A**: `(x << n) + (x << (n−1)) + ... + (x << m)`
-- **형식 B**: `(x << (n+1)) - (x << m)`
+- **형식 A**: $(x << n) + (x << (n−1)) + ... + (x << m)$
+- **형식 B**: $(x << (n+1)) - (x << m)$
 - 하드웨어 명령 실행 속도와 연산 식에 따라 최적화의 효율성은 달라질 수 있다.
 
 # 2.3.7 Dividing by powers of 2
@@ -181,14 +181,13 @@
 - proper한 반올림을 하기 위해 bias를 더하여 음수에 대한 improper 반올림을 수정할 수 있으며, 이 때 bias는 $2^k-1$이다. 
 
 ![2_3_2 7](https://github.com/user-attachments/assets/11966102-36bd-4523-8688-fc08c5bc7438)
-    - **DERIVATION**
-        - C 프로그램은 round를 $\lfloor x/y \rfloor$로 처리하기 때문에 $x/y<0$에 대해서 $\lceil x/y \rceil$이 되도록 적절한 bias를 더해야 한다.
-        - $\lceil x/y \rceil$= $\lfloor {x+y-1}/y \rfloor$ 라는 성질을 이용하자. 
-        - $x =qy+r$이라고 하면 
-                    
+- **DERIVATION**
+    - C 프로그램은 round를 $\lfloor x/y \rfloor$로 처리하기 때문에 $x/y<0$에 대해서 $\lceil x/y \rceil$이 되도록 적절한 bias를 더해야 한다.
+
+    - $\lceil x/y \rceil$= $\lfloor {x+y-1}/y \rfloor$ 라는 성질을 이용하자. 
+        - $x =qy+r$이라고 하면       
             $\lfloor {x+y-1}/y \rfloor$ = $\lfloor {(q+1)*y+r-1}/y \rfloor$  = $q+1+\lfloor {r-1}/y \rfloor$ 
-        - $0≤r<y$ 이므로 
-        
+        - $0≤r<y$ 이므로         
             $\lfloor {x+y-1}/y \rfloor=q+1-1 = q$ (r=0)
             $\lfloor {x+y-1}/y \rfloor= q+1$    (r>0) 
         - 따라서 x/y<0 일 때 bias를 더하여  $\lceil x/y \rceil$가 되며 bias는 $y-1$ = $2^k-1$이다. 
