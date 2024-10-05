@@ -1,3 +1,7 @@
+---
+created: 2024-10-01T18:09
+modified: 2024-10-01T18:09
+---
 # 2.2. Integer Representation
 
 ### Table of Contents

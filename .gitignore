@@ -12,3 +12,4 @@ replit.nix
 # Ignore Smart Connections folder
 .smart-connections/
 .obsidian/
+.obsidian.vimrc
