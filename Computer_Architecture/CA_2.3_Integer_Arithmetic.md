@@ -1,19 +1,19 @@
 # 2.3 Integer Arithmetic
 
-- 컴퓨터 세상에서는 두 개의 positive num를 더했을 때, negative number result가 될 수 있고, x<y 와 x-y<0 의 결과가 다를 수 있다.
+- 컴퓨터 세상에서는 두 개의 positive num를 더했을 때, negative number result가 될 수 있고, $x<y $와 $x-y<0$ 의 결과가 다를 수 있다.
 
-- x,y를 w-bit의 number라고 하며, x = 2^w-1, y = -1일 때 
+- $x,y$를 w-bit의 number라고 하며, $x = 2^w-1, y = -1$일 때 
 
-→ x<y 는 false이고, 
-→ x-y<0에서는 2^w-1 -(-1) = 2^w 일 때 2^w는 overflow되어 음수가 되기 때문에 x-y<0 은 true이다.
+→ $x<y$ 는 false이고, 
+→ $x-y<0$에서는 $2^w-1 -(-1) = 2^w $일 때 $2^w$는 overflow되어 음수가 되기 때문에 $x-y<0$ 은 true이다.
 
 ## 2.3.1 unsigned addition
 
 - lisp 같은 일부 프로그래밍 언어는 임의 크기의 정수를 허용하는 무한 정수 연산이지만, 대부분의 언어는 고정 크기의 정수 연산을 지원한다.
 
 
-- 두 개의 음이 아닌 정수 x와 y 0≤x, y<2^w  는 w bit로 표현된다. 
-- 두 수의 합의 범위는 0≤x+y≤2^(w+1)-2가 된다. 이는 w+1bit를 필요로 한다.  
+- 두 개의 음이 아닌 정수 x와 y $0≤x, y<2^w$  는 w bit로 표현된다. 
+- 두 수의 합의 범위는 $0≤x+y≤2^(w+1)-2$가 된다. 이는 w+1bit를 필요로 한다.  
             
     → 따라서 w+1 bit를 w bit로 변환해야 할 필요가 있다.
 - $ x +^{u}_{w} y $  정의(w bit의 unsigned number 더하기) : x+y의 결과를 w bit로 자르고 그 결과를 부호 없는 숫자로 해석한 결과.
@@ -89,7 +89,7 @@
 
 ## 2.3.3 Two’s complement Negation
 
-- unsigned 와 마찬가지로 + t w 의 역원이 존재한다.
+- unsigned 와 마찬가지로 $+ ^{t} _{w} x$ 의 역원이 존재한다.
 
 ![2_3_2 15](https://github.com/user-attachments/assets/a0798146-04bf-4eed-bfa8-3de3da42c484)
 
