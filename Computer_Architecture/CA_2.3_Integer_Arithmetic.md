@@ -20,7 +20,7 @@
 
 ![2_3_2 11](https://github.com/user-attachments/assets/09f7619a-9d65-4e93-8818-dfacbbbe64ae)
 
-![alt text](image.png)
+![2_3_2 1](https://github.com/user-attachments/assets/fd4fbeef-1f28-4ba7-aafe-03bf83e5bbed)
 - **DERIVATION**
 
     → $ 2^w ≤ x + y < 2^{w+1} $ 일 때는 w+1 bit는 항상 1이다. 따라서 가장 마지막 bit를 지우는 것은 $2^w$를 빼는 것과 같다.
@@ -73,10 +73,11 @@
 
         → $x + ^{t}_{ w} y = U2Tw[(x+y)mod 2^w]$
         
-    ![alt text](image-1.png)
+   
+![2_3_2 2](https://github.com/user-attachments/assets/3da1436e-1d11-4d31-9e03-5f3709a92ae5)
     
     → x+y의 4가지 범위에 따라 각각의 값으로 매핑된다.
-    - ex)    Case 1 ($-2^{w}≤x+y<-2^{w-1}$) 
+ - ex)    Case 1 ($-2^{w}≤x+y<-2^{w-1}$) 
         - $(x+y) mod2^w = x+y +2^w$
         - $x+y+2^w$ ≤ $Tmax_w$ 이므로 $U2Tw[x+y+2^w] = x+y+2^w$
 
@@ -117,7 +118,7 @@
     
     → w bit로 자른 각각의 $x*y$ 값을 binary로 바꾸었을 때 값이 같다.  -> bit level equicalence하다. 
 - **DERIVATION**
-    ![alt text](image-2.png)
+    ![2_3_2 3](https://github.com/user-attachments/assets/ba10d381-4655-4b0d-96bd-5c3c306cbbf4)
 
 
 ## 2.3.6 Multiplying by Constants
@@ -141,7 +142,8 @@
 
 - 2^k으로 나누고 0으로 반올림하는 것은 오른쪽으로 k만큼 logical shift하는 것과 같다.
 - 이 때 반올림은 rounds toward zero이다.
-![alt text](image-4.png)
+
+![2_3_2 5](https://github.com/user-attachments/assets/568b7ca1-705a-4604-a571-66d65685c36e)
 
 ### **Two’s complement division by a power of 2, rounding down**
 
@@ -158,12 +160,15 @@
 
 
 
-![alt text](image-3.png)
+
+![2_3_2 4](https://github.com/user-attachments/assets/6be60ef9-01b6-470e-97cb-ed292ee50243)
+
 - arithmetic shift를 사용하면 logical shift와 다르게 round toward zero가 아니라 round downward(내림)이다.
 
     - ⌊x / 2^k⌋  에서 x/2^k가 음수 일 때 작거나 같은 정수이기 때문에 0보다 먼 수로 반올림 된다.
 
-![alt text](image-5.png)
+
+![2_3_2 6](https://github.com/user-attachments/assets/6292f05c-4987-461c-8472-658d2d01e6fa)
 
 - 책에서는 rounding down을 improper한 rounding이라는 표현을 사용한다.
 - proper한 rounding을 하기 위해서는 x/y<0 일 때는 $\lceil x/y \rceil$, x/y>0 에서는 $\lfloor x/y \rfloor$ 가 되어 round toward zero가 되어야 한다. 
@@ -174,7 +179,8 @@
 ### **Two’s complement division by a power of 2, rounding up**
 
 - proper한 반올림을 하기 위해 bias를 더하여 음수에 대한 improper 반올림을 수정할 수 있으며, 이 때 bias는 $2^k-1$이다. 
-![alt text](image-6.png)
+
+![2_3_2 7](https://github.com/user-attachments/assets/11966102-36bd-4523-8688-fc08c5bc7438)
     - **DERIVATION**
         - C 프로그램은 round를 $\lfloor x/y \rfloor$로 처리하기 때문에 $x/y<0$에 대해서 $\lceil x/y \rceil$이 되도록 적절한 bias를 더해야 한다.
         - $\lceil x/y \rceil$= $\lfloor {x+y-1}/y \rfloor$ 라는 성질을 이용하자. 
