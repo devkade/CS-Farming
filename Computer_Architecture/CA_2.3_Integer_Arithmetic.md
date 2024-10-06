@@ -13,27 +13,27 @@
 
 
 - 두 개의 음이 아닌 정수 x와 y $0≤x, y<2^w$  는 w bit로 표현된다. 
-- 두 수의 합의 범위는 $0≤x+y≤2^(w+1)-2$가 된다. 이는 w+1bit를 필요로 한다.  
+- 두 수의 합의 범위는 $0≤x+y≤2^{w+1}-2$가 된다. 이는 w+1bit를 필요로 한다.  
             
     → 따라서 w+1 bit를 w bit로 변환해야 할 필요가 있다.
-- $ x +^{u}_{w} y $  정의(w bit의 unsigned number 더하기) : x+y의 결과를 w bit로 자르고 그 결과를 부호 없는 숫자로 해석한 결과.
+- $x+^{u}_{w}y$  정의(w bit의 unsigned number 더하기) : x+y의 결과를 w bit로 자르고 그 결과를 부호 없는 숫자로 해석한 결과.
 
 ![2_3_2 11](https://github.com/user-attachments/assets/09f7619a-9d65-4e93-8818-dfacbbbe64ae)
 
 ![2_3_2 1](https://github.com/user-attachments/assets/fd4fbeef-1f28-4ba7-aafe-03bf83e5bbed)
 - **DERIVATION**
 
-    → $ 2^w ≤ x + y < 2^{w+1} $ 일 때는 w+1 bit는 항상 1이다. 따라서 가장 마지막 bit를 지우는 것은 $2^w$를 빼는 것과 같다.
+    → $2^w ≤ x + y < 2^{w+1}$ 일 때는 w+1 bit는 항상 1이다. 따라서 가장 마지막 bit를 지우는 것은 $2^w$를 빼는 것과 같다.
 - (e.g. if w = 4bit) 
-→ x= 15, y = 8 일 때 x, y의 bit representation은 [1111], [1000] 이고 두 수의 합은 [10111]이다. 이 때 상위 bit를 버리면 [0111]로 7이 된다. 이는 (15 + 8) mod 16과 일치한다. 따라서 $ x +^{u}_{4} y $ = 7이다.
+→ x= 15, y = 8 일 때 x, y의 bit representation은 [1111], [1000] 이고 두 수의 합은 [10111]이다. 이 때 상위 bit를 버리면 [0111]로 7이 된다. 이는 (15 + 8) mod 16과 일치한다. 따라서 $x+^{u}_{4}y$ = 7이다.
 
 
 ### **Detecting overflow of unsigned number**
 
-- 0≤ x, y≤ $UMaxw$ 일 때, s = $ x +^{u}_{w} y $ 라고 하자.  이 때 s < x 이거나 s < y일 때 overflow가 발생한 것을 알 수 있다.
+- 0≤ x, y≤ $UMaxw$ 일 때, s = $x+^{u}_{w}y$ 라고 하자.  이 때 s < x 이거나 s < y일 때 overflow가 발생한 것을 알 수 있다.
 - **DERIVATION**
     
-    만약 overflow가 발생하였다면 $ s= x+y-2^w$가 된다. 이 때 $y-2^w<0$이므로 $s= x+(y-2^w) <x$
+    만약 overflow가 발생하였다면 $s= x+y-2^w$가 된다. 이 때 $y-2^w<0$이므로 $s= x+(y-2^w) <x$
 
 ### unsigned negation
 
@@ -42,13 +42,13 @@
     - 군의 특징은 결합 법칙, 항등원의 존재, 역원의 존재를 만족한다.
     - 항등원은 덧셈에서는 0이다. ($a + e = a$ 일 때 e를 항등원)
     - 역원은 $-^{u}_{w}x$ 이다. ($a + x = e$일 때 x를 역원)
-- w비트의 unsigned number 집합과 덧셈 연산 $+^{u}_ {w}$ 에 대해 역원이 존재해야 하기 때문에, 각 값 x에 대해 $-^{u}_{w}x$ 라는 어떤 값이 존재해야 하며, $-^{u}_{w}x$ $+^{u}_ {w}$ = 0이어야 한다.
+- w비트의 unsigned number 집합과 덧셈 연산 $+^{u}_{w}$ 에 대해 역원이 존재해야 하기 때문에, 각 값 x에 대해 $-^{u}_{w}x$ 라는 어떤 값이 존재해야 하며, $-^{u}_{w}x$ $+^{u}_ {w}$ = 0이어야 한다.
 
 ![2_3_2 12](https://github.com/user-attachments/assets/2bd83792-c5c7-4f44-b2a3-510fa11f752f)
 
 - **DERIVATION**
 
-    →  x= 0 일 때, 덧셈 역원은 0,  x > 0 일 때, $2^w - x$ 값은 $0 < 2^w - x < 2^w$ 범위에 존재하며,$( x+ 2^w -x ) mod 2^w = 0$이다. 따라서 $+^{u}_{w}x$의 역원은 $2^w - x$이다.
+    →  x= 0 일 때, 덧셈 역원은 0,  x > 0 일 때, $2^w - x$ 값은 $0 < 2^w - x < 2^w$ 범위에 존재하며,$(x+2^w-x)mod2^w=0$이다. 따라서 $+^{u}_{w}x$의 역원은 $2^w - x$이다.
 
 ## 2.3.2 Two’s complement additon
 
@@ -63,7 +63,7 @@
     - unsigned 와 two’s complement addition은 정확히 같은 bit-level representation을 가지기 때문에, 대부분의 컴퓨터는 두 addition 연산에 대해 같은 기계 명령어를 사용한다
 
     
-        → 같은 bit-level representation 이므로 $x + ^{t}_{ w} y$ 는 x, y를 unsigned number 로 변환 후  $x + ^{u}_{ w} y$ 수행 후 다시 two’s complement number로 변환하는 것과 같다. 
+        → 같은 bit-level representation 이므로 $x+^{t}_{w}y$ 는 x, y를 unsigned number 로 변환 후  $x+^{u}_{w}y$ 수행 후 다시 two’s complement number로 변환하는 것과 같다. 
         - 이를 식으로 나타내면
         
         ![2_3_2 14](https://github.com/user-attachments/assets/a4d74b2a-b1b3-49f4-8c1d-cffd1eff34d6)
@@ -112,7 +112,7 @@
 
 ![2_3_2 17](https://github.com/user-attachments/assets/970cf25c-ebf6-47f6-9c36-e32ccfb27eee)
 
-## **Bit level equivalence of unsigned and two’s complement multiplication**
+### **Bit level equivalence of unsigned and two’s complement multiplication**
 
 - $x = B2Tw(x), y= B2Tw(y)$라 하고, $x' = B2Uw(x), y' = B2Uw(y)$라 할 때, $T2Bw(x*^{t} _{w}y) = U2Bw(x'*^{u} _{w}y')$ 이다. 
     
@@ -136,7 +136,7 @@
 - **형식 B**: $(x << (n+1)) - (x << m)$
 - 하드웨어 명령 실행 속도와 연산 식에 따라 최적화의 효율성은 달라질 수 있다.
 
-# 2.3.7 Dividing by powers of 2
+## 2.3.7 Dividing by powers of 2
 
 ### **Unsigned division by a power of 2**
 
