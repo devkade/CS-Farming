@@ -1,11 +1,11 @@
 ---
 up: "[[Computer Architecture Map]]"
-related: 
+related:
 tags:
-  - 📝/🌿️
-aliases: 
+    - 📝/🌿️
+aliases:
 cssclasses:
-  - dashboard
+    - dashboard
 created: 2024-09-24T22:05
 modified: 2024-10-01T18:09
 ---
