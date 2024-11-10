@@ -1,13 +1,13 @@
 ---
 up: "[[Computer Architecture Map]]"
-related:
+related: 
 tags:
-    - 📝/🌿️
-aliases:
+  - 📝/🌿️
+aliases: 
 cssclasses:
-    - dashboard
+  - dashboard
 created: 2024-09-24T22:05
-modified: 2024-10-01T18:09
+modified: 2024-11-11T00:10
 ---
 
 > [!NOTE] Title
@@ -23,3 +23,4 @@ modified: 2024-10-01T18:09
 
 -   [CA_2.1_Information_Storage](./CA_2.1_Information_Storage.md)
 -   [CA_2.2_Integer_Representation](./CA_2.2_Integer_Representation.md)
+-   [CA_2.3_Integer_Arithmetic](./CA_2.3_Integer_Arithmetic.md)

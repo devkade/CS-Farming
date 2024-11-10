@@ -1,13 +1,14 @@
 ---
 created: 2024-10-01T20:31
-modified: 2024-10-06T01:31
+modified: 2024-11-11T00:12
 ---
-# Contents
+# Map of Contents
 
 - [CA_3.1_Historical_Perspective](./CA_3.1_Historical_Perspective.md)
 - [CA_3.2_Program_Encodings](./CA_3.2_Program_Encodings.md)
 - [CA_3.3_Data_Formats](./CA_3.3_Data_Formats.md)
 - [CA_3.4_Accessing_Information](./CA_3.4_Accessing_Information.md)
+- [CA_3.5_Arithmetic_and_Logical_Operation](./CA_3.5_Arithmetic_and_Logical_Operation.md)
 
 # Learning Objectives
 
