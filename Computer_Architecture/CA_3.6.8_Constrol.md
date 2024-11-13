@@ -1,4 +1,4 @@
-# 3.6.8 Switch Statements
+git commit -m "feat: add CH.3.6.8"# 3.6.8 Switch Statements
 
 - Switch문은 정수 인덱스 값에 따라 다중분기(if-else문 여러개)를 효율적으로 처리하는 기능을 제공한다.
 - C 코드를 읽기 쉽게 해줄 뿐만 아니라 점프 테이블이라는 자료구조를 사용해서 효율적인 구현을 가능하게 한다.
@@ -40,7 +40,7 @@
     - gcc는 코드 위치의 포인터를 생성하는 새로운 연산자 &&를 추가했다.
         - && : gcc의 goto문에서 사용되는 code location의 포인터 생성 연산자
     - 원래의 c 코드 (switch_eg)에서는 100~106으로 고정된 값일 경우이지만, switch 변수 n은 임의의 정수일 수 있다. 따라서 컴파일러는 n에서 100을 빼서 범위를 0에서 6으로 이동시키고, 이를 index라는 새로운 변수로 정의한다.
-        - 100~106 - 100 = 0~6
+        - 100 ~ 106 - 100 = 0 ~ 6
     - index를 unsigned value로 설정하면 분기의 경우의 수를 줄일 수 있다.
         - index<0인 값을 unsigned로 하면 index>0으로 통일됨
     - index>6이면 모두 default case로 처리한다.
