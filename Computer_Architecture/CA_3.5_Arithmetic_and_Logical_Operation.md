@@ -65,7 +65,7 @@
     → `leaq M[5x + 7], %rax` : Register `%rax`에 `M[5x + 7]`의 주소값(Address), 즉 5x + 7을 할당함.
     - Compiler는 effective address computation과 관련없는 `leaq`의 영리한 사용법(위 예시와 같은)을 찾아내기도 함.
 
-![Figure 3.10](https://github.com/user-attachments/assets/4d7daa87-eb6f-45fa-89f1-818ec084e61d)
+<img src="https://github.com/user-attachments/assets/4d7daa87-eb6f-45fa-89f1-818ec084e61d" title="Figure 3.10" alter="Figure 3.10" width=550>
 
 - Notation
     - $>>_A$ : Arithmetic right shift
@@ -218,7 +218,7 @@ cf. `%rax` Extended Accumulator Register : 사칙연산 명령어에서 자동�
 
 ## a. Figure 3.12 Special Arithmetic Operations
 
-<center><img src="https://github.com/user-attachments/assets/02e2b204-ab9c-4ac0-b663-45e08671562d" alt="Figure 3.12" title="Figure 3.12"></center>
+<center><img src="https://github.com/user-attachments/assets/02e2b204-ab9c-4ac0-b663-45e08671562d" alt="Figure 3.12" title="Figure 3.12" width=550></center>
 
 - 두 개의 64-bit Numbers의 full 128-bit 곱 연산, 나누기 연산을 지원함.
 

@@ -46,7 +46,7 @@
 
 ### Example
 - `t = a+b`를 수행하는 ADD Instruction을 수행하는 상황.
-    <img src="https://github.com/user-attachments/assets/d9cfbc26-d354-4f32-8e85-b765d700a1dd" alter="Condition codes example" title="Condition codes example">
+    <img src="https://github.com/user-attachments/assets/d9cfbc26-d354-4f32-8e85-b765d700a1dd" alter="Condition codes example" title="Condition codes example" width=550>
 
 <br>
 
@@ -58,7 +58,7 @@
 
 <br>
 
-<center><img src="https://github.com/user-attachments/assets/db9a5833-5fe4-44d3-8e78-545566e0bb37" alter="Figure 3.13" title="Figure 3.13"></center>
+<center><img src="https://github.com/user-attachments/assets/db9a5833-5fe4-44d3-8e78-545566e0bb37" alter="Figure 3.13" title="Figure 3.13" width=550></center>
 
 - Register의 값을 바꾸지 않으면서, Condition Codes를 Setting하는 두 가지 Instructions. (Figure 3.13의 Instructions) (having 8-, 16-, 32-, and 64-bit forms)
     1. `CMP`
