@@ -13,10 +13,12 @@
 
 
 - 두 개의 음이 아닌 정수 x와 y $0≤x, y<2^w$  는 w bit로 표현된다. 
+
 - 두 수의 합의 범위는 $0≤x+y≤2^(w+1)-2$가 된다. 이는 w+1bit를 필요로 한다.  
             
     → 따라서 w+1 bit를 w bit로 변환해야 할 필요가 있다.
 - $ x +^{u}_{w} y $  정의(w bit의 unsigned number 더하기) : x+y의 결과를 w bit로 자르고 그 결과를 부호 없는 숫자로 해석한 결과.
+
 
 ![2_3_2 11](https://github.com/user-attachments/assets/09f7619a-9d65-4e93-8818-dfacbbbe64ae)
 
@@ -64,7 +66,8 @@
 
     
         → 같은 bit-level representation 이므로 $x + ^{t}_{ w} y$ 는 x, y를 unsigned number 로 변환 후  $x + ^{u}_{ w} y$ 수행 후 다시 two’s complement number로 변환하는 것과 같다. 
-        - 이를 식으로 나타내면
+
+    - 이를 식으로 나타내면
         
         ![2_3_2 14](https://github.com/user-attachments/assets/a4d74b2a-b1b3-49f4-8c1d-cffd1eff34d6)
         
@@ -112,6 +115,7 @@
 
 ![2_3_2 17](https://github.com/user-attachments/assets/970cf25c-ebf6-47f6-9c36-e32ccfb27eee)
 
+
 ## **Bit level equivalence of unsigned and two’s complement multiplication**
 
 - $x = B2Tw(x), y= B2Tw(y)$라 하고, $x' = B2Uw(x), y' = B2Uw(y)$라 할 때, $T2Bw(x*^{t} _{w}y) = U2Bw(x'*^{u} _{w}y')$ 이다. 
@@ -135,6 +139,7 @@
 - **형식 A**: $(x << n) + (x << (n−1)) + ... + (x << m)$
 - **형식 B**: $(x << (n+1)) - (x << m)$
 - 하드웨어 명령 실행 속도와 연산 식에 따라 최적화의 효율성은 달라질 수 있다.
+
 
 # 2.3.7 Dividing by powers of 2
 
