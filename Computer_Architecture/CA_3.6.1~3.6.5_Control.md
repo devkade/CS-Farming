@@ -80,7 +80,7 @@
 ## Three ways of using Condition Codes
 - Condition Codes를 직접 읽지 않고,  사용되는 다른 방식.
 ## 1. Single Byte를 Condition Codes의 어떤 조합에 따라 0 or 1로 Setting.
-<center><img src="https://github.com/user-attachments/assets/ec392ac7-5674-4212-b104-3920fc2aa87f" width=450 alter="Figure 3.14" title="Figure 3.14"></center>
+<center><img src="https://github.com/user-attachments/assets/ec392ac7-5674-4212-b104-3920fc2aa87f" width=550 alter="Figure 3.14" title="Figure 3.14"></center>
 
 - `SET`이라는 Instruction으로, 고려되는 Condition Codes의 조합의 다름에 따라, Suffix도 달라짐. (e.g. sete, sets, setns, etc.)<br>
 → 여기서의 Suffix는 다른 크기의 Data를 Operand로 하는 의미가 아님. (!= `salb` etc.)
