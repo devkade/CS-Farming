@@ -46,7 +46,8 @@
 
 ### Example
 - `t = a+b`를 수행하는 ADD Instruction을 수행하는 상황.
-    <img src="https://github.com/user-attachments/assets/d9cfbc26-d354-4f32-8e85-b765d700a1dd" alter="Condition codes example" title="Condition codes example" width=550>
+
+<img src="https://github.com/user-attachments/assets/d9cfbc26-d354-4f32-8e85-b765d700a1dd" alter="Condition codes example" title="Condition codes example" width=550>
 
 <br>
 
