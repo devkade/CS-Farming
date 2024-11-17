@@ -1,14 +1,14 @@
 ---
 up: "[[CA 1 A Tour of Computer Systems]]"
 related:
-    - "[[CA 1.3 It Pays to UnderStand How Compilation Systems Work]]"
+  - "[[CA 1.3 It Pays to UnderStand How Compilation Systems Work]]"
 tags:
-    - 📝/🌱️
-aliases:
+  - 📝/🌱️
+aliases: 
 cssclasses:
-    - dashboard
+  - dashboard
 created: 2024-09-22T21:12
-modified: 2024-09-22T22:44
+modified: 2024-11-17T17:44
 ---
 
 ## 1.2 Programs Are Translated by Other Programs into Different Forms

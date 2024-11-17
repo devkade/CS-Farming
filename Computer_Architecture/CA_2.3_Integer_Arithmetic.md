@@ -1,3 +1,7 @@
+---
+created: 2024-11-17T17:44
+modified: 2024-11-17T17:44
+---
 # 2.3 Integer Arithmetic
 
 - 컴퓨터 세상에서는 두 개의 positive num를 더했을 때, negative number result가 될 수 있고, $x<y $와 $x-y<0$ 의 결과가 다를 수 있다.
