@@ -1,14 +1,14 @@
 ---
 up: "[[CA 1 A Tour of Computer Systems]]"
 related:
-    - "[[CA 1.2 Programs Are Translated by Other Programs into Different Forms]]"
+  - "[[CA 1.2 Programs Are Translated by Other Programs into Different Forms]]"
 tags:
-    - 📝️/🌱️
-aliases:
+  - 📝️/🌱️
+aliases: 
 cssclasses:
-    - dashboard
+  - dashboard
 created: 2024-09-22T17:03
-modified: 2024-09-23T19:22
+modified: 2024-11-17T17:44
 ---
 
 ## 1.1 Information Is Bits + Context

@@ -2,12 +2,12 @@
 up: "[[CA 1 A Tour of Computer Systems]]"
 related: []
 tags:
-    - 📝/🌱️
-aliases:
+  - 📝/🌱️
+aliases: 
 cssclasses:
-    - dashboard
+  - dashboard
 created: 2024-09-22T21:53
-modified: 2024-09-23T00:32
+modified: 2024-11-17T17:44
 ---
 
 ## 1.5 Caches Matter

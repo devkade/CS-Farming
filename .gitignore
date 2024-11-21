@@ -8,9 +8,11 @@ private/
 .replit
 replit.nix
 
+.smtcmp*
 
 # Ignore Smart Connections folder
 .smart-connections/
+.smart-env/
 .obsidian/
 .obsidian.vimrc
 Templates
